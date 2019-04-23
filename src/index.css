@@ -1,0 +1,6 @@
+body{
+    background: url('./background.jpg');
+    background-size: conver;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

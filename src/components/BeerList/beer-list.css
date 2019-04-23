@@ -1,0 +1,20 @@
+
+body{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+}
+.beer-list{
+    background: rgb(241, 196, 15,0.9);
+    color : #fff;
+    padding: 2em;
+    text-align: center;
+    width:60%;
+    margin: auto;
+}
+
+.giphy-image img{
+    max-width: 100%;
+}
