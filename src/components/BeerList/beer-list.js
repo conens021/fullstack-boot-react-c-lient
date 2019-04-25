@@ -19,7 +19,7 @@ class BeerList extends Component {
             isLoading: true
         })
 
-        fetch('http://localhost:8080/beers?page=0&size=5&sort=name,desc')
+        fetch('http://localhost:8080/server/beers?page=0&size=5&sort=name,desc')
             .then((response) => response.json())
             .then(data => this.setState({
                 beers: data._embedded.beers,
