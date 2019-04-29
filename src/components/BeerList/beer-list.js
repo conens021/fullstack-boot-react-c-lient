@@ -16,7 +16,8 @@ class BeerList extends Component {
 
     componentDidMount = () => {
         const headers = {
-             'Access-Control-Allow-Origin': 'http://localhost:8080/server'
+             'Access-Control-Allow-Origin': 'http://localhost:8080/server',
+             'Accept' : 'Application/json; charset=utf-8'
         }
         this.setState({
             isLoading: true
