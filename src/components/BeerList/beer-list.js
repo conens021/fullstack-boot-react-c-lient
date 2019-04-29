@@ -12,22 +12,21 @@ class BeerList extends Component {
         isLoading: false
     }
 
-
+    headers = {
+        'Access-Control-Allow-Origin': 'http://localhost:8080',
+        'Accept': 'Application/json; charset=utf-8',
+        'Referer':'http://localhost:5000/',
+        'Origin':'http://localhost:5000'
+    }
 
     componentDidMount = () => {
-        const headers = {
-             'Access-Control-Allow-Origin': 'http://localhost:8080/server',
-             'Accept' : 'Application/json; charset=utf-8',
-             'Referer':'http://165.227.128.198:5000',
-             'Origin':'http://165.227.128.198:5000/'
-        }
         this.setState({
             isLoading: true
         })
 
         fetch('http://localhost:8080/server/beers?page=0&size=5&sort=name,desc',
              {
-                headers
+                headers : this.headers
              })
             .then((response) => response.json())
             .then(data => this.setState({
