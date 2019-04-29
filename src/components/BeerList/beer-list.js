@@ -15,11 +15,17 @@ class BeerList extends Component {
 
 
     componentDidMount = () => {
+        const headers = {
+             'Access-Control-Allow-Origin': 'http://localhost:8080/server'
+        }
         this.setState({
             isLoading: true
         })
 
-        fetch('http://localhost:8080/server/beers?page=0&size=5&sort=name,desc')
+        fetch('http://localhost:8080/server/beers?page=0&size=5&sort=name,desc',
+             {
+                headers
+             })
             .then((response) => response.json())
             .then(data => this.setState({
                 beers: data._embedded.beers,
